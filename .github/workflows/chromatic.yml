@@ -1,26 +1,21 @@
-# Workflow name
 name: 'Chromatic'
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
-# List of jobs
 jobs:
-  chromatic-deployment:
-    # Operating System
+  chromatic:
     runs-on: ubuntu-latest
-    # Job steps
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: ./.github/actions/prepare
-        # 👇 Adds Chromatic as a step in the workflow
-      - name: Publish to Chromatic
-        uses: chromaui/action-next@v1
-        # Chromatic GitHub Action options
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
         with:
-          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
