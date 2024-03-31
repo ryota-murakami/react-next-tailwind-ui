@@ -13,6 +13,5 @@ runs:
         node-version: '20'
     - run: |
         pnpm install --frozen-lockfile
-        pnpm prisma generate
       shell: bash
   using: composite
