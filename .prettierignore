@@ -25,3 +25,4 @@ bun.lockb
 coverage
 storybook-static
 .all-contributorsrc
+generators
