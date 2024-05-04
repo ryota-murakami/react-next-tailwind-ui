@@ -2,7 +2,7 @@ import React from 'react'
 
 interface CaretToggleProps {}
 
-export const CaretToggle: React.FC<CaretToggleProps> = (props) => {
+export const CaretToggle: React.FC<CaretToggleProps> = (_props) => {
   return (
     <div className="flex h-[72px] w-8 items-center justify-center">
       <div className="flex h-6 w-6 flex-col items-center">
