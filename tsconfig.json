@@ -11,10 +11,8 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "strict": true,
-
     "noEmit": true,
     "noImplicitAny": false,
-
     "module": "esnext",
     "moduleResolution": "bundler",
     "jsx": "preserve",

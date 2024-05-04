@@ -20,7 +20,7 @@ module.exports = {
     },
     {
       type: 'add',
-      path: 'src/components/index.ts',
+      path: 'src/components/{{properCase name}}/index.ts',
       templateFile: 'generators/index.ts.hbs',
     },
   ],
