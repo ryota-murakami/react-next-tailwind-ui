@@ -11,7 +11,7 @@ export default function useSessionStorage<T>(
       return initialValue
     }
     try {
-      let item = null
+      let item: ReturnType<typeof window.localStorage.getItem> = null
       if (key) {
         item = window.localStorage.getItem(key)
       }

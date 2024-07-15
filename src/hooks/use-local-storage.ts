@@ -8,7 +8,7 @@ export default function useLocalStorage<T>(
 ) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
-      let item = null
+      let item: ReturnType<typeof window.localStorage.getItem> = null
       if (key) {
         item = window.localStorage.getItem(key)
       }
