@@ -12,7 +12,9 @@ module.exports = {
     project: ['tsconfig.json'],
   },
   plugins: [],
-  rules: {},
+  rules: {
+    'react-hooks/exhaustive-deps': 'off',
+  },
   settings: {},
   overrides: [],
 }

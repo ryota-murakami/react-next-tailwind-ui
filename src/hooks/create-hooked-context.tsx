@@ -1,4 +1,5 @@
-import { ReactNode, createContext, useContext } from 'react'
+import type { ReactNode } from 'react'
+import { createContext, useContext } from 'react'
 
 const createHookedContext = <T,>(fn: () => T) => {
   type HookReturnType = ReturnType<typeof fn>
