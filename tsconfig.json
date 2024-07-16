@@ -33,6 +33,8 @@
     "./**.mjs",
     "next-env.d.ts",
     "**/*.ts",
+    "**/*.js",
+    "**/*.jsx",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "generators/index.js"
