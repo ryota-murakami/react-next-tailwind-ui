@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 
+// @TODO Visible when the user scrolls down the page
 export const ScrollToTop = () => {
   const [visible, setVisible] = useState(false)
 
