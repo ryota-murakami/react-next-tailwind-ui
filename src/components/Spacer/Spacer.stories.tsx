@@ -8,8 +8,10 @@ const meta: Meta<typeof Spacer> = {
   tags: ['autodocs'],
   decorators: [
     (Story) => (
-      <div style={{ border: '2px solid black', width: '50%' }}>
+      <div className="grid place-content-start">
+        <h1 className="text-4xl font-bold dark:text-white">Breaking News</h1>
         <Story />
+        <p className="dark:text-white">News deitals article...</p>
       </div>
     ),
   ],
