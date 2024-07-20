@@ -36,30 +36,30 @@ export const _2xs: Story = {
     size: '2xs',
   },
 }
-export const xs: Story = {
+export const Xs: Story = {
   args: {
     size: 'xs',
   },
 }
-export const sm: Story = {
+export const Sm: Story = {
   args: {
     size: 'sm',
   },
 }
 
-export const md: Story = {
+export const Md: Story = {
   args: {
     size: 'md',
   },
 }
 
-export const lg: Story = {
+export const Lg: Story = {
   args: {
     size: 'lg',
   },
 }
 
-export const xl: Story = {
+export const Xl: Story = {
   args: {
     size: 'xl',
   },
