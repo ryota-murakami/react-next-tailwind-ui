@@ -1,12 +1,10 @@
 import { useState } from 'react'
 
-import useDidUpdateEffect from './useDidUpdateEffect'
+import useReRenderEffect from './useDidUpdateEffect'
 
 const useReferentialEqual = (val: any) => {
-  console.log(val)
-
-  const [state, setState] = useState({})
-  useDidUpdateEffect(() => {
+  const [, setState] = useState({})
+  useReRenderEffect(() => {
     setState((prev: any) => {
       console.log(prev === val)
       return { val }

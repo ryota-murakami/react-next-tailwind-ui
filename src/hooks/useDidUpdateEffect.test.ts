@@ -1,10 +1,10 @@
 import { renderHook } from '@testing-library/react'
 
-import useDidUpdateEffect from './useDidUpdateEffect'
+import useReRenderEffect from './useDidUpdateEffect'
 
 test('useUpdateEffect simulates componentDidUpdate', () => {
   const effect = vi.fn()
-  const { rerender } = renderHook(() => useDidUpdateEffect(effect))
+  const { rerender } = renderHook(() => useReRenderEffect(effect))
 
   expect(effect).toHaveBeenCalledTimes(0)
   rerender()
