@@ -1,8 +1,10 @@
 'use client'
 
+import { MoveUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
-// @TODO Visible when the user scrolls down the page
+import { cn } from '@/lib/utils'
+
 export const ScrollToTop = () => {
   const [visible, setVisible] = useState(false)
 
@@ -32,10 +34,10 @@ export const ScrollToTop = () => {
     <button
       type="button"
       onClick={scrollToTop}
-      className={`rounded-full p-4 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 fixed bottom-5 right-5 ${visible ? 'block' : 'hidden'}`}
+      className={cn('p-4 fixed bottom-5 right-5', visible ? 'block' : 'hidden')}
       style={{ zIndex: 99 }}
     >
-      ↑
+      <MoveUp />
     </button>
   )
 }
