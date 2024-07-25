@@ -10,6 +10,8 @@ const preview: Preview = {
       theme: themes.normal,
     },
   },
+
+  tags: ['autodocs'],
 }
 
 export default preview
