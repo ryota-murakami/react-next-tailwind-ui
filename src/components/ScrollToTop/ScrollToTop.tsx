@@ -1,11 +1,16 @@
 'use client'
 
 import { MoveUp } from 'lucide-react'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, type ComponentProps } from 'react'
 
 import { cn } from '@/lib/utils'
 
-export const ScrollToTop = () => {
+export const ScrollToTop = ({
+  className,
+  ...props
+}: ComponentProps<'button'> & {
+  className?: string
+}) => {
   const [visible, setVisible] = useState(false)
 
   const toggleVisibility = () => {
@@ -34,8 +39,13 @@ export const ScrollToTop = () => {
     <button
       type="button"
       onClick={scrollToTop}
-      className={cn('p-4 fixed bottom-5 right-5', visible ? 'block' : 'hidden')}
+      className={cn(
+        'p-4 fixed bottom-5 right-5',
+        visible ? 'block' : 'hidden',
+        className,
+      )}
       style={{ zIndex: 99 }}
+      {...props}
     >
       <MoveUp />
     </button>
