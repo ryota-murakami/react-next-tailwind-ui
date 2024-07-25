@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
-import './globals.css'
+import '@/styles/globals.css'
 
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
